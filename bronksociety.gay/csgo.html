@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSGO CASE – BRONKBETS.GAY</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=VT323&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: black;
+      color: white;
+      font-family: 'VT323', monospace;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: red;
+      text-shadow: 2px 2px white;
+    }
+
+    .case-button {
+      font-size: 2rem;
+      background: red;
+      color: black;
+      padding: 1rem 2rem;
+      border: 2px solid white;
+      cursor: pointer;
+      margin-top: 2rem;
+      font-family: 'Staatliches', sans-serif;
+      transition: transform 0.2s;
+    }
+
+    .case-button:hover {
+      transform: scale(1.1);
+      background: white;
+      color: red;
+    }
+
+    .carousel {
+      display: flex;
+      overflow: hidden;
+      width: 80%;
+      margin: 2rem auto;
+      border: 3px solid red;
+      background: #111;
+      height: 100px;
+      position: relative;
+    }
+
+    .item {
+      flex-shrink: 0;
+      width: 120px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      border-right: 1px solid #222;
+      font-family: 'Staatliches', sans-serif;
+    }
+
+    .rarity-common { background: #ccc; }
+    .rarity-blue { background: #3366ff; color: white; }
+    .rarity-purple { background: #8000ff; color: white; }
+    .rarity-pink { background: #ff3399; color: white; }
+    .rarity-red { background: #ff3300; color: white; }
+    .rarity-gold { background: gold; color: black; }
+
+    .winner {
+      margin-top: 2rem;
+      font-size: 2rem;
+      color: #ffcc00;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔫 CSGO CASE OPENING</h1>
+  <p>Crack it open and pray to Gaben...</p>
+
+  <div class="carousel" id="carousel"></div>
+  <button class="case-button" onclick="openCase()">Open Case</button>
+
+  <div class="winner" id="winner-text"></div>
+
+  <script src="java/caseitems.js"></script>
+  <script>
+    const carousel = document.getElementById("carousel");
+    const winnerText = document.getElementById("winner-text");
+  
+    function openCase() {
+      carousel.innerHTML = '';
+      winnerText.textContent = '';
+  
+      let pool = [];
+        for (let i = 0; i < 40; i++) {
+        const item = caseItems[Math.floor(Math.random() * caseItems.length)];
+        const div = document.createElement("div");
+        div.className = `item ${item.rarity}`;
+
+        const img = document.createElement("img");
+        img.src = item.gif;
+        img.alt = item.name;
+        img.style.width = "100px";
+        img.style.height = "80px";
+        img.style.objectFit = "contain";
+        img.style.imageRendering = "pixelated";
+
+        div.appendChild(img);
+        pool.push({ div, item });
+        carousel.appendChild(div);
+        }
+  
+      let scrollX = 0;
+      const itemWidth = 120;
+      const totalScroll = itemWidth * (pool.length - 5);
+      const scrollDuration = 3000;
+      let startTime = null;
+  
+      function scrollStep(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const progress = timestamp - startTime;
+        scrollX = Math.min(totalScroll, totalScroll * (progress / scrollDuration));
+        carousel.scrollLeft = scrollX;
+  
+        if (progress < scrollDuration) {
+          requestAnimationFrame(scrollStep);
+        } else {
+          const centerIndex = Math.floor(scrollX / itemWidth) + 2;
+          const finalItem = pool[centerIndex].item;
+          winnerText.textContent = `🎉 You unboxed: ${finalItem.name}`;
+          showPopup(finalItem);
+        }
+      }
+  
+      requestAnimationFrame(scrollStep);
+    }
+  
+    function showPopup(item) {
+      const popup = document.getElementById("popup");
+      document.getElementById("popup-name").textContent = item.name;
+      document.getElementById("popup-gif").src = item.gif;
+  
+      const statsDiv = document.getElementById("popup-stats");
+      statsDiv.innerHTML = '';
+      for (const key in item.stats) {
+        const p = document.createElement("p");
+        p.textContent = `${key}: ${item.stats[key]}`;
+        statsDiv.appendChild(p);
+      }
+  
+      popup.style.display = "flex";
+    }
+  
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+  <div id="popup" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:black; color:white; z-index:1000; text-align:center; justify-content:center; align-items:center; flex-direction:column;">
+    <img id="popup-gif" src="" style="max-width:300px; margin:20px auto; border:2px solid red;">
+    <h2 id="popup-name" style="font-size:2rem;"></h2>
+    <div id="popup-stats" style="margin:10px auto;"></div>
+    <button onclick="closePopup()" style="margin-top:20px; padding:10px 20px; background:red; color:black; font-weight:bold; border:2px solid white;">CLOSE</button>
+  </div>
+</body>
+</html>
