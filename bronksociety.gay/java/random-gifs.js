@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "images/baby.gif",
       "images/nuke.gif",
       "images/horsekick.gif",
+      "images/cowboysmoke.gif",
       "images/cowboysmoke.gif"
     ];
   
