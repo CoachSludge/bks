@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&family=VT323&family=Rubik+Mono+One&family=Silkscreen&display=swap');
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'VT323', monospace;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #111;
+  border-bottom: 3px solid red;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Staatliches', sans-serif;
+  font-size: 4rem;
+  color: red;
+  text-shadow: 2px 2px #fff;
+}
+
+.slogan {
+  font-size: 1.3rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+nav a {
+  margin: 0 1rem;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid red;
+  padding: 0.5rem 1rem;
+  background: #222;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background: red;
+  color: black;
+}
+
+.hero-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  filter: contrast(140%) grayscale(10%);
+  border-bottom: 2px dashed red;
+}
+
+main {
+  padding: 2rem;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: rgb(0, 0, 0);
+    color: black;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid white;
+    text-transform: uppercase;
+    font-family: 'Staatliches', sans-serif;
+    letter-spacing: 1px;
+    transition: transform 0.2s ease-in-out, background-color 0.2s;
+}
+.button:hover {
+    transform: rotate(-1.5deg) scale(1.07);
+    background-color: #ffffff5e;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 8px red, 0 0 4px white;
+}
+
+footer {
+  background: #111;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Optional CRT overlay effect */
+.crt-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    rgba(255, 255, 255, 0.02) 0px,
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  z-index: 999;
+}
+
+/* ABOUT PAGE STYLES */
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin: 3rem 0 2rem;
+  color: red;
+  text-shadow: 1px 1px white;
+  font-family: 'Staatliches', sans-serif;
+}
+
+.cowboy-quote {
+  font-style: italic;
+  color: #ccc;
+  margin: 2rem auto;
+  font-size: 1.2rem;
+  max-width: 800px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  padding: 0 1rem;
+  margin-bottom: 3rem;
+}
+
+.member-card {
+    background: #111;
+    color: #fff;
+    padding: 2rem;
+    border: 3px dashed red;
+    border-radius: 0.5rem;
+    text-align: center;
+    box-shadow: 0 0 12px red, 0 0 4px white;
+    text-decoration: none;
+    transition: all 0.15s ease-in-out;
+    width: 280px;
+    font-family: 'VT323', monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+.member-card:hover {
+    transform: scale(1.03) rotate(-0.5deg);
+    box-shadow: 0 0 24px red, 0 0 10px white;
+    background-color: #222;
+}
+  
+.member-card img {
+    border-radius: 0;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border: 4px solid white;
+    margin-bottom: 1rem;
+    image-rendering: pixelated;
+    filter: contrast(130%) saturate(120%);
+}
+  
+.member-card h3 {
+    font-size: 1.6rem;
+    margin: 0.5rem 0 0.25rem;
+    color: red;
+    text-shadow: 1px 1px #fff;
+}
+  
+.member-card p {
+    color: #aaa;
+    font-size: 1rem;
+    margin-bottom: 0;
+    text-shadow: 0 0 2px #000;
+}
+.member-card::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      rgba(255, 255, 255, 0.02) 0px,
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+    z-index: 1;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}
+.card-section {
+    margin-bottom: 4rem;
+}
+  
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.updates-section {
+    margin-top: 4rem;
+    padding: 2rem;
+    background-color: #111;
+    border-top: 2px dashed red;
+  }
+  
+  .updates-section h2 {
+    color: red;
+    text-shadow: 1px 1px #fff;
+    font-family: 'Staatliches', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  #updates-list {
+    list-style-type: square;
+    color: #ccc;
+    font-size: 1.1rem;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+  }
+  
+  #updates-list li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 0.5rem;
+    font-family: 'VT323', monospace;
+  }
+  
+  #updates-list li::before {
+    content: '>';
+    position: absolute;
+    left: -1.2rem;
+    color: red;
+  }
+  #track-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .track-embed iframe {
+    width: 100%;
+    height: 160px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 0 10px red;
+  }
+@keyframes tremble {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(1deg); }
+    50% { transform: rotate(-1.5deg) scale(1.07); }
+    75% { transform: rotate(0.8deg); }
+    100% { transform: rotate(0deg); }
+}
+  
+.button:hover {
+    animation: tremble 0.3s ease-in-out;
+    background-color: #fff;
+    color: red;
+    box-shadow: 0 0 8px red, 0 0 4px white;
+}
+nav a {
+    display: inline-block;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #222;
+    border: 2px solid red;
+    color: white;
+    font-family: 'Staatliches', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  nav a:hover {
+    transform: rotate(-1.5deg) scale(1.05);
+    background: rgb(255, 255, 255);
+    color: black;
+    box-shadow: 0 0 8px red, 0 0 4px white;
+  }
+  .edge-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .gif-row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .edge-gif {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    border: 3px solid red;
+    border-radius: 6px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .edge-header h2 {
+    font-size: 3rem;
+    font-family: 'Staatliches', sans-serif;
+    color: red;
+    text-shadow: 2px 2px white;
+    text-transform: uppercase;
+  }
+  .edge-gif:hover {
+    transform: scale(1.5);
+    box-shadow: 0 0 20px red, 0 0 8px white;
+    z-index: 10;
+  }
