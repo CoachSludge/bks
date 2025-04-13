@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "images/nuke.gif",
       "images/horsekick.gif",
       "images/cowboysmoke.gif",
-      "images/cowboysmoke.gif"
+      "toebeans.gif"
     ];
   
     const numberToShow = 3; // how many gifs to display
