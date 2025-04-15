@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BRONKSOCIETY.GAY</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=VT323&family=Rubik+Mono+One&family=Silkscreen&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="crt-overlay"></div>
+  <header>
+    <h1>BRONKSOCIETY.GAY</h1>
+    <p class="slogan">Yeehaw meets degeneracy. Creamy...</p>
+    <nav class="bronk-nav">
+        <div class="nav-left">
+          <a href="index.html">BRONK HOME</a>
+        </div>
+        <div class="nav-functional hidden md:flex space-x-6">
+          <!-- Toggle between Movies and TV Shows -->
+          <button @click="currentTab = currentTab === 'movies' ? 'shows' : 'movies'" 
+                  class="nav-link br-btn">
+            <span x-text="currentTab === 'movies' ? 'Switch to TV Shows' : 'Switch to Movies'"></span>
+          </button>
+        
+          <!-- Link to Live Sports -->
+          <a href="livesports" class="nav-link br-btn">🥊 Live Sports</a>
+        
+          <!-- Watch Later with dynamic badge -->
+          <button @click="showWatchLater = true" class="nav-link br-btn flex items-center space-x-2">
+            <span>📺 Watch Later</span>
+            <span x-show="watchLaterCount > 0" 
+                  class="br-badge"
+                  x-text="watchLaterCount"></span>
+          </button>
+        </div>
+      
+        <div class="nav-search">
+          <input type="text" id="searchInput" placeholder="🔍 Search..." />
+        </div>
+      
+        <div class="nav-right">
+        </div>
+      </nav>
+  </header>
+
+  <footer>
+    <p>© 2025 BRONKSOCIETY.GAY | Saddle up, or ride out.</p>
+  </footer>
+  <script src="java/goofyize.js"></script>
+</body>
+</html>
