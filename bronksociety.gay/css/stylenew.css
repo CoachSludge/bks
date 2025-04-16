@@ -385,3 +385,29 @@ body {
     text-align: center;
     margin-bottom: 1rem;
   }
+  .tv-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1024px;
+    margin: 2rem auto;
+  }
+  
+  .tv-frame {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  .tv-screen-content {
+    position: absolute;
+    top: 9%;    /* adjust depending on your PNG */
+    left: 10%;  /* adjust depending on your PNG */
+    width: 80%; /* match visible screen area */
+    height: 80%;
+    overflow-y: auto;
+    z-index: 1;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
