@@ -3,14 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>BRONKSOCIETY.GAY</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=VT323&family=Rubik+Mono+One&family=Silkscreen&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="crt-overlay"></div>
   <header>
-    <h1>BRONKSOCIETY.GAY</h1>
-    <p class="slogan">Yeehaw meets degeneracy. Creamy...</p>
     <nav class="bronk-nav">
         <div class="nav-left">
           <a href="index.html">BRONK HOME</a>
@@ -29,7 +27,7 @@
           <button @click="showWatchLater = true" class="nav-link br-btn flex items-center space-x-2">
             <span>📺 Watch Later</span>
             <span x-show="watchLaterCount > 0" 
-                  class="br-badge"
+                  class="br-btn"
                   x-text="watchLaterCount"></span>
           </button>
         </div>
@@ -46,6 +44,5 @@
   <footer>
     <p>© 2025 BRONKSOCIETY.GAY | Saddle up, or ride out.</p>
   </footer>
-  <script src="java/goofyize.js"></script>
 </body>
 </html>

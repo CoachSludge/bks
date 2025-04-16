@@ -390,22 +390,17 @@ nav a {
   }
   
   .br-btn {
-    background-color: red;
-    color: black;
-    font-family: 'Staatliches', sans-serif;
-    font-size: 1rem;
-    border: 2px solid white;
-    padding: 0.4rem 1rem;
-    border-radius: 6px;
-    text-transform: uppercase;
-    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: black;
+    border-bottom: 2px solid red;
+    font-family: 'VT323', monospace;
   }
   
   .br-btn:hover {
-    background-color: white;
     color: red;
-    box-shadow: 0 0 8px red;
-    transform: scale(1.05);
   }
   
   .br-badge {

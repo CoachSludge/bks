@@ -1,0 +1,368 @@
+/* style.css */
+body {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer footer";
+    grid-template-columns: 350px 1fr; /* ⬅ Wider sidebar */
+    min-height: 100vh;
+    background: black;
+    color: white;
+    font-family: 'VT323', monospace;
+  }
+  
+  .crt-overlay {
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.03),
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+    pointer-events: none;
+    z-index: 999;
+  }
+  
+  .main-header {
+    grid-area: header;
+    background: #111;
+    border-bottom: 3px solid red;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between; /* Keeps logo left, nav right */
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .main-nav a,
+  .main-nav input {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 1rem;
+    color: white;
+    background: black;
+    border: 2px solid red;
+    padding: 0.4rem 0.8rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  
+  .main-nav input {
+    width: 140px;
+    font-family: 'VT323', monospace;
+  }
+  
+  .main-nav a:hover,
+  .main-nav input:hover {
+    background: red;
+    color: black;
+    border-color: white;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    background: #111;
+    padding: 1rem;
+    border-right: 4px solid red; /* 🔥 This is the visible divider */
+    z-index: 2;
+  }
+  
+  .sidebar-box {
+    border: 3px solid white;
+    padding: 1rem;
+    background: #111;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  
+  .main-content {
+    grid-area: main;
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .main-box {
+    border: 3px solid red;
+    padding: 2rem;
+    background: #111;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #111;
+    border-top: 2px solid red;
+  }
+  
+  .footer a {
+    border: 2px solid white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .footer a:hover {
+    background: red;
+    color: black;
+  }
+  .track-embed {
+    margin-bottom: 1rem;
+    border: 2px solid red;
+    background: #000;
+    box-shadow: 0 0 10px red;
+  }
+  .sidebar-box ul {
+    list-style-type: square;
+    margin-top: 0.5rem;
+    padding-left: 1.2rem;
+    color: #ff4444;
+  }
+  
+  .sidebar-box ul li {
+    margin-bottom: 0.4rem;
+    font-family: 'VT323', monospace;
+    font-size: 1rem;
+    text-shadow: 1px 1px black;
+  }
+  .collapsible-content {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  
+  .collapsible-content.collapsed {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+  
+  /* Optional: make headers pop */
+  .toggle-header {
+    user-select: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: red;
+    text-shadow: 1px 1px white;
+    margin-bottom: 0.5rem;
+    position: relative;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  
+  .toggle-header::after {
+    content: '▼';
+    font-size: 0.8rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: transform 0.3s;
+  }
+  
+  /* Rotation + scale pop on hover */
+  .toggle-header:hover {
+    transform: rotate(-2deg) scale(1.05);
+    color: white;
+    text-shadow: 2px 2px red;
+  }
+  
+  /* Optional: animate arrow rotation on collapse */
+  .collapsible-content.collapsed + .toggle-header::after {
+    transform: rotate(-90deg);
+  }
+  /* Sidebar box hover effect (whole box shakes) */
+  .sidebar-box {
+    background: #111;
+    border: 2px solid red;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .sidebar-box:hover {
+    animation: sidebarShake 0.4s ease-in-out;
+    border-color: white;
+    box-shadow: 0 0 10px red;
+  }
+  
+  /* Shaky chaotic effect */
+  @keyframes sidebarShake {
+    0%   { transform: rotate(0deg); }
+    20%  { transform: rotate(1deg); }
+    40%  { transform: rotate(-1.5deg); }
+    60%  { transform: rotate(1deg); }
+    80%  { transform: rotate(-1deg); }
+    100% { transform: rotate(0deg); }
+  }
+  .button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: red;
+    color: black;
+    font-family: 'Staatliches', sans-serif;
+    font-size: 1.2rem;
+    border: 2px solid white;
+    border-radius: 8px;
+    margin: 1rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+  
+  .button:hover {
+    background: white;
+    color: red;
+    transform: scale(1.05) rotate(-1deg);
+  }
+  .gamble-select {
+    display: flex;
+    justify-content: flex-start; /* aligns to the left */
+    gap: 1rem; /* space between buttons */
+    margin: 1rem 0;
+    flex-wrap: wrap; /* optional: wrap on small screens */
+  }
+  .nav-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    font-family: 'Staatliches', sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    background-color: red;
+    color: black;
+    border: 2px solid white;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 5px red, 0 0 10px black;
+  }
+  
+  .nav-button:hover {
+    background-color: white;
+    color: red;
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 0 10px white, 0 0 20px red;
+  }
+  .slogan {
+    font-size: 1.8rem;
+    font-family: 'Staatliches', sans-serif;
+    color: red;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px white;
+  }
+  
+  .hero-img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border: 3px solid red;
+    box-shadow: 0 0 12px white;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    line-height: 1.5;
+    color: white;
+  }
+  
+  .discord-button {
+    display: inline-block;
+    background: red;
+    color: black;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid white;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-family: 'Staatliches', sans-serif;
+  }
+  
+  .discord-button:hover {
+    background: white;
+    color: red;
+    border-color: red;
+    transform: scale(1.05) rotate(-1.5deg);
+    transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+  .section-title {
+    font-size: 2rem;
+    color: red;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px white;
+    font-family: 'Staatliches', sans-serif;
+  }
+  
+  .card-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .card-section {
+    margin-bottom: 2rem;
+  }
+  
+  .cowboy-quote {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #ffdddd;
+  }
+  .member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 3px solid red;
+    border-radius: 4px;
+    padding: 1rem;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-family: 'Staatliches', sans-serif;
+    overflow: hidden;
+  }
+  
+  .member-card:hover {
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 0 0 12px red;
+    z-index: 10;
+  }
+  
+  .member-card img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    border: 2px solid black;
+  }
+  
+  .member-card h3,
+  .member-card p {
+    margin: 0;
+    padding: 0 0.5rem;
+    text-align: center;
+    word-break: break-word;
+    white-space: normal; /* allows wrapping */
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+  
+  

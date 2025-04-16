@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
       "images/baby.gif",
       "images/nuke.gif",
       "images/horsekick.gif",
-      "images/cowboysmoke.gif"
+      "images/toebeans.gif",
+      "images/deadcowboy.gif"
     ];
   
     const numberToShow = 3; // how many gifs to display
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     selected.forEach(src => {
       const img = document.createElement("img");
       img.src = src;
-      img.alt = "BROKEBACK.GIF";
+      img.alt = "nuke.gif";
       img.className = "edge-gif";
       gifContainer.appendChild(img);
     });
