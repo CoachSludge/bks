@@ -365,4 +365,23 @@ body {
     max-width: 100%;
   }
   
+  .projects-goals {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 2px dashed red;
+  }
   
+  .projects-goals .description {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    color: #ffdddd;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    color: red;
+    text-shadow: 1px 1px white;
+    font-family: 'Staatliches', sans-serif;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
