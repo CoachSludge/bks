@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     async function fetchNorthstarServers() {
         try {
             console.log("🔄 Fetching Northstar servers from local JSON...");
-            const response = await fetch("https://bubba.industries/northstar_servers.json");
+            const response = await fetch("../northstar_servers.json");
 
             if (!response.ok) throw new Error(`HTTP Error ${response.status}`);
 

@@ -3,7 +3,7 @@ const caseItems = [
   {
     name: "Coors | Banquet",
     rarity: "rarity-red",
-    gif: "images/csgo/banq.gif",
+    gif: "../assets/images/csgo/banq.gif",
     stats: {
       "Rarity": "RED",
       "Kills": 420,
@@ -15,7 +15,7 @@ const caseItems = [
   {
     name: "Coors | Banquet",
     rarity: "rarity-purple",
-    gif: "images/csgo/banq.gif",
+    gif: "../assets/images/csgo/banq.gif",
     stats: {
       "Rarity": "PURPLE",
       "Kills": 723,
@@ -27,7 +27,7 @@ const caseItems = [
   {
     name: "Coors | Banquet",
     rarity: "rarity-gold",
-    gif: "images/csgo/banq.gif",
+    gif: "../assets/images/csgo/banq.gif",
     stats: {
       "Rarity": "GOLD",
       "Kills": 1100,
@@ -41,7 +41,7 @@ const caseItems = [
   {
     name: "ZYN MAGA | Gold",
     rarity: "rarity-red",
-    gif: "images/csgo/zynmagagold.gif",
+    gif: "../assets/images/csgo/zynmagagold.gif",
     stats: {
       "Rarity": "RED",
       "Kills": 300,
@@ -53,7 +53,7 @@ const caseItems = [
   {
     name: "ZYN MAGA | Gold",
     rarity: "rarity-purple",
-    gif: "images/csgo/zynmagagold.gif",
+    gif: "../assets/images/csgo/zynmagagold.gif",
     stats: {
       "Rarity": "PURPLE",
       "Kills": 580,
@@ -65,7 +65,7 @@ const caseItems = [
   {
     name: "ZYN MAGA | Gold",
     rarity: "rarity-gold",
-    gif: "images/csgo/zynmagagold.gif",
+    gif: "../assets/images/csgo/zynmagagold.gif",
     stats: {
       "Rarity": "GOLD",
       "Kills": 1000,
@@ -79,7 +79,7 @@ const caseItems = [
   {
     name: "ZYN MAGA | Black",
     rarity: "rarity-red",
-    gif: "images/csgo/zynmagablack.gif",
+    gif: "../assets/images/csgo/zynmagablack.gif",
     stats: {
       "Rarity": "RED",
       "Kills": 320,
@@ -91,7 +91,7 @@ const caseItems = [
   {
     name: "ZYN MAGA | Black",
     rarity: "rarity-purple",
-    gif: "images/csgo/zynmagablack.gif",
+    gif: "../assets/images/csgo/zynmagablack.gif",
     stats: {
       "Rarity": "PURPLE",
       "Kills": 690,
@@ -103,7 +103,7 @@ const caseItems = [
   {
     name: "ZYN MAGA | Black",
     rarity: "rarity-gold",
-    gif: "images/csgo/zynmagablack.gif",
+    gif: "../assets/images/csgo/zynmagablack.gif",
     stats: {
       "Rarity": "GOLD",
       "Kills": 1111,
@@ -117,7 +117,7 @@ const caseItems = [
   {
     name: "ZYN LADEN | Gold",
     rarity: "rarity-red",
-    gif: "images/csgo/zynladgold.gif",
+    gif: "../assets/images/csgo/zynladgold.gif",
     stats: {
       "Rarity": "RED",
       "Kills": 333,
@@ -129,7 +129,7 @@ const caseItems = [
   {
     name: "ZYN LADEN | Gold",
     rarity: "rarity-purple",
-    gif: "images/csgo/zynladgold.gif",
+    gif: "../assets/images/csgo/zynladgold.gif",
     stats: {
       "Rarity": "PURPLE",
       "Kills": 666,
@@ -141,7 +141,7 @@ const caseItems = [
   {
     name: "ZYN LADEN | Gold",
     rarity: "rarity-gold",
-    gif: "images/csgo/zynladgold.gif",
+    gif: "../assets/images/csgo/zynladgold.gif",
     stats: {
       "Rarity": "GOLD",
       "Kills": 999,
@@ -155,7 +155,7 @@ const caseItems = [
   {
     name: "ZYN LADEN | Black",
     rarity: "rarity-red",
-    gif: "images/csgo/zynladblack.gif",
+    gif: "../assets/images/csgo/zynladblack.gif",
     stats: {
       "Rarity": "RED",
       "Kills": 420,
@@ -167,7 +167,7 @@ const caseItems = [
   {
     name: "ZYN LADEN | Black",
     rarity: "rarity-purple",
-    gif: "images/csgo/zynladblack.gif",
+    gif: "../assets/images/csgo/zynladblack.gif",
     stats: {
       "Rarity": "PURPLE",
       "Kills": 780,
@@ -179,7 +179,7 @@ const caseItems = [
   {
     name: "ZYN LADEN | Black",
     rarity: "rarity-gold",
-    gif: "images/csgo/zynladblack.gif",
+    gif: "../assets/images/csgo/zynladblack.gif",
     stats: {
       "Rarity": "GOLD",
       "Kills": 1300,
@@ -191,7 +191,7 @@ const caseItems = [
     {
     name: "Marlboro | Red 100s",
     rarity: "rarity-red",
-    gif: "images/csgo/mred.gif",
+    gif: "../assets/images/csgo/mred.gif",
     stats: {
       "Rarity": "RED",
       "Kills": 312,
@@ -203,7 +203,7 @@ const caseItems = [
   {
     name: "Marlboro | Red 100s",
     rarity: "rarity-purple",
-    gif: "images/csgo/mred.gif",
+    gif: "../assets/images/csgo/mred.gif",
     stats: {
       "Rarity": "PURPLE",
       "Kills": 601,
@@ -215,7 +215,7 @@ const caseItems = [
   {
     name: "Marlboro | Red 100s",
     rarity: "rarity-gold",
-    gif: "images/csgo/mred.gif",
+    gif: "../assets/images/csgo/mred.gif",
     stats: {
       "Rarity": "GOLD",
       "Kills": 902,
@@ -229,7 +229,7 @@ const caseItems = [
   {
     name: "Keystone | Light",
     rarity: "rarity-red",
-    gif: "images/csgo/keystone.gif",
+    gif: "../assets/images/csgo/keystone.gif",
     stats: {
       "Rarity": "RED",
       "Kills": 380,
@@ -241,7 +241,7 @@ const caseItems = [
   {
     name: "Keystone | Light",
     rarity: "rarity-purple",
-    gif: "images/csgo/keystone.gif",
+    gif: "../assets/images/csgo/keystone.gif",
     stats: {
       "Rarity": "PURPLE",
       "Kills": 702,
@@ -253,7 +253,7 @@ const caseItems = [
   {
     name: "Keystone | Light",
     rarity: "rarity-gold",
-    gif: "images/csgo/keystone.gif",
+    gif: "../assets/images/csgo/keystone.gif",
     stats: {
       "Rarity": "GOLD",
       "Kills": 1200,
@@ -267,7 +267,7 @@ const caseItems = [
   {
     name: "Guinness | Bottle",
     rarity: "rarity-red",
-    gif: "images/csgo/ginnis.gif",
+    gif: "../assets/images/csgo/ginnis.gif",
     stats: {
       "Rarity": "RED",
       "Kills": 390,
@@ -279,7 +279,7 @@ const caseItems = [
   {
     name: "Guinness | Bottle",
     rarity: "rarity-purple",
-    gif: "images/csgo/ginnis.gif",
+    gif: "../assets/images/csgo/ginnis.gif",
     stats: {
       "Rarity": "PURPLE",
       "Kills": 690,
@@ -291,7 +291,7 @@ const caseItems = [
   {
     name: "Guinness | Bottle",
     rarity: "rarity-gold",
-    gif: "images/csgo/ginnis.gif",
+    gif: "../assets/images/csgo/ginnis.gif",
     stats: {
       "Rarity": "GOLD",
       "Kills": 1050,
@@ -303,7 +303,7 @@ const caseItems = [
   {
     name: "Tesco | PIWO",
     rarity: "rarity-common",
-    gif: "images/csgo/piwo.gif",
+    gif: "../assets/images/csgo/piwo.gif",
     stats: {
       "Rarity": "COMMON",
       "Kills": 204,
@@ -314,7 +314,7 @@ const caseItems = [
   {
     name: "Tesco | PIWO",
     rarity: "rarity-purple",
-    gif: "images/csgo/piwo.gif",
+    gif: "../assets/images/csgo/piwo.gif",
     stats: {
       "Rarity": "PURPLE",
       "Kills": 764,
@@ -326,7 +326,7 @@ const caseItems = [
   {
     name: "Tesco | PIWO",
     rarity: "rarity-gold",
-    gif: "images/csgo/piwo.gif",
+    gif: "../assets/images/csgo/piwo.gif",
     stats: {
       "Rarity": "GOLD",
       "Kills": 1523,
@@ -340,7 +340,7 @@ const caseItems = [
   {
     name: "GMOD | Toolgun",
     rarity: "rarity-common",
-    gif: "images/csgo/toolgun.gif",
+    gif: "../assets/images/csgo/toolgun.gif",
     stats: {
       "Rarity": "COMMON",
       "Kills": 394,
@@ -351,7 +351,7 @@ const caseItems = [
   {
     name: "GMOD | Toolgun",
     rarity: "rarity-blue",
-    gif: "images/csgo/toolgun.gif",
+    gif: "../assets/images/csgo/toolgun.gif",
     stats: {
       "Rarity": "BLUE",
       "Kills": 678,
@@ -363,7 +363,7 @@ const caseItems = [
   {
     name: "GMOD | Toolgun",
     rarity: "rarity-purple",
-    gif: "images/csgo/toolgun.gif",
+    gif: "../assets/images/csgo/toolgun.gif",
     stats: {
       "Rarity": "PURPLE",
       "Kills": 1023,
@@ -377,7 +377,7 @@ const caseItems = [
   {
     name: "White Monster | Pack",
     rarity: "rarity-red",
-    gif: "images/csgo/whitemonstercig.gif",
+    gif: "../assets/images/csgo/whitemonstercig.gif",
     stats: {
       "Rarity": "RED",
       "Kills": 357,
@@ -388,7 +388,7 @@ const caseItems = [
   {
     name: "White Monster | Pack",
     rarity: "rarity-purple",
-    gif: "images/csgo/whitemonstercig.gif",
+    gif: "../assets/images/csgo/whitemonstercig.gif",
     stats: {
       "Rarity": "PURPLE",
       "Kills": 801,
@@ -400,7 +400,7 @@ const caseItems = [
   {
     name: "White Monster | Ultra White Zero",
     rarity: "rarity-gold",
-    gif: "images/csgo/whitemonster.gif",
+    gif: "../assets/images/csgo/whitemonster.gif",
     stats: {
       "Rarity": "GOLD",
       "Kills": 1337,
@@ -415,7 +415,7 @@ const caseItems = [
   {
     name: "Baby | Pack",
     rarity: "rarity-blue",
-    gif: "images/csgo/baby.gif",
+    gif: "../assets/images/csgo/baby.gif",
     stats: {
       "Rarity": "BLUE",
       "Kills": 91,
@@ -426,7 +426,7 @@ const caseItems = [
   {
     name: "Baby | Pack",
     rarity: "rarity-pink",
-    gif: "images/csgo/baby.gif",
+    gif: "../assets/images/csgo/baby.gif",
     stats: {
       "Rarity": "PINK",
       "Kills": 666,
@@ -438,7 +438,7 @@ const caseItems = [
   {
     name: "HITLER | Pack",
     rarity: "rarity-gold",
-    gif: "images/csgo/hitlercig.gif",
+    gif: "../assets/images/csgo/hitlercig.gif",
     stats: {
       "Rarity": "GOLD",
       "Kills": 1488,

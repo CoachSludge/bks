@@ -2,13 +2,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const gifContainer = document.getElementById("random-gifs");
   
     const gifPaths = [
-      "images/offdown.gif",
-      "images/ratedm.gif",
-      "images/baby.gif",
-      "images/nuke.gif",
-      "images/horsekick.gif",
-      "images/toebeans.gif",
-      "images/deadcowboy.gif"
+      "../assets/images/offdown.gif",
+      "../assets/images/ratedm.gif",
+      "../assets/images/baby.gif",
+      "../assets/images/nuke.gif",
+      "../assets/images/horsekick.gif",
+      "../assets/images/toebeans.gif",
+      "../assets/images/deadcowboy.gif"
     ];
   
     const numberToShow = 3; // how many gifs to display
