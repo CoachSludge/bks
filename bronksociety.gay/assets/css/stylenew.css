@@ -411,3 +411,50 @@ body {
     padding: 1rem;
     box-sizing: border-box;
   }
+  /* Server list layout */
+#server-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Individual server box */
+#server-list a {
+  background: #1a1a1a;
+  border: 2px solid #ff0000;
+  color: white;
+  padding: 1rem;
+  flex: 1 1 300px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'VT323', monospace;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 5px red;
+}
+
+#server-list a:hover {
+  background: black;
+  color: red;
+  transform: scale(1.03) rotate(-1deg);
+  box-shadow: 0 0 12px red;
+}
+
+/* Server text */
+#server-list h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
+  font-family: 'Staatliches', sans-serif;
+  text-shadow: 1px 1px red;
+}
+
+#server-list p {
+  margin: 0.25rem 0;
+  color: #ccc;
+}
+
+#server-list span {
+  font-weight: bold;
+}
