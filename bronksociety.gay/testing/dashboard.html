@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - BRONKSOCIETY.GAY</title>
+  <link rel="stylesheet" href="../assets/css/stylenew.css">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Staatliches&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="crt-overlay"></div>
+
+  <header class="main-header">
+    <div class="logo">
+      <a href="index.html" class="nav-button">bronksociety.gay</a>
+    </div>
+    <nav class="main-nav">
+      <span id="user-email-display" class="nav-button">Logged in as...</span>
+      <button class="nav-button" onclick="logout()">Logout</button>
+    </nav>
+  </header>
+
+  <aside class="sidebar">
+    <div class="sidebar-box">
+      <h3 class="toggle-header" onclick="switchTab('settings')">⚙️ Settings</h3>
+    </div>
+    <div class="sidebar-box">
+      <h3 class="toggle-header" onclick="switchTab('bio')">📝 Bio</h3>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="main-box">
+      <div id="settings-tab" class="admin-tab">
+        <h2 class="section-title">Account Settings</h2>
+        <label>Email: <input type="email" id="new-email"></label><br>
+        <label>Username: <input type="text" id="new-username"></label><br>
+        <label>New Password: <input type="password" id="new-password"></label><br>
+        <label>Upload PFP: <input type="file" id="pfp-upload" accept="image/*"></label><br>
+        <button class="button" onclick="updateSettings()">Update Settings</button>
+      </div>
+
+      <div id="bio-tab" class="admin-tab" style="display:none">
+        <h2 class="section-title">Write Your Bio</h2>
+        <textarea id="bio-text" rows="8" style="width:100%;"></textarea>
+        <button class="button" onclick="saveBio()">Save Bio</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <a href="page/about.html" class="nav-button">about</a>
+    <p>© 2025 BRONKSOCIETY.GAY | Saddle up, or ride out.</p>
+  </footer>
+
+  <script src="assets/java/dashboard.js"></script>
+</body>
+</html>
