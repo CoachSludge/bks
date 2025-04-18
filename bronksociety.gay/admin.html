@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BRONKSOCIETY.GAY - Admin Panel</title>
+  <link rel="stylesheet" href="assets/css/stylenew.css">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Staatliches&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="crt-overlay"></div>
+
+  <header class="main-header">
+    <div class="logo">
+        <a href="index.html" class="nav-button">bronksociety.gay</a>
+    </div>
+    <nav class="main-nav">
+        <a href="servers.html" class="nav-button">servers</a>
+        <a href="media.html" class="nav-button">videos</a>
+        <a href="games.html" class="nav-button">games</a>
+        <a href="shop.html" class="nav-button">shop</a>
+        <input type="text" placeholder="search">
+        <a href="login.html" class="nav-button">login</a>
+    </nav>
+  </header>
+
+  <aside class="sidebar">
+    <div class="sidebar-box">
+      <h3 class="toggle-header" onclick="switchTab('updates')">📝 Updates</h3>
+    </div>
+    <div class="sidebar-box">
+      <h3 class="toggle-header" onclick="switchTab('tracks')">🎶 Tracks</h3>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="main-box">
+      <div id="updates-tab" class="admin-tab">
+        <h2 class="section-title">Manage Updates</h2>
+        <ul id="update-list" class="admin-list"></ul>
+        <button class="button" onclick="addUpdate()">➕ Add Update</button>
+        <button class="button" onclick="saveUpdates()">💾 Save updates.js</button>
+      </div>
+
+      <div id="tracks-tab" class="admin-tab" style="display:none;">
+        <h2 class="section-title">Manage Tracks</h2>
+        <ul id="track-list-admin" class="admin-list"></ul>
+        <button class="button" onclick="addTrack()">➕ Add Track</button>
+        <button class="button" onclick="saveTracks()">💾 Save tracks.js</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <a href="page/about.html" class="nav-button">about</a>
+    <p>© 2025 BRONKSOCIETY.GAY | Saddle up, or ride out.</p>
+  </footer>
+
+  <script>
+    let updates = [
+      "added gambling",
+      "shat ourselves",
+      "Launched BRONKSOCIETY.GAY — this is not satire."
+    ];
+
+    let tracks = [
+      { title: "birthdaymix9000", url: "https://soundcloud.com/coachsludge/birthdaymix9000" },
+      { title: "Thigh High Socks Mix", url: "https://soundcloud.com/swedetarded/thigh-high-socks-mix" },
+      { title: "SwedeTard♿︎ AND DJ 張果老 (Zhāng Guǒ Lǎo) - Double Decking Cuba Cheese MIX", url: "https://soundcloud.com/vostokrider/swedetard-and-dj-zhang-guo-lao-double-decking-cuba-cheese-mix" }
+    ];
+
+    function renderUpdates() {
+      const list = document.getElementById('update-list');
+      list.innerHTML = '';
+      updates.forEach((text, i) => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <input value="${text}" onchange="updates[${i}] = this.value">
+          <button onclick="moveUpdate(${i}, -1)">🔼</button>
+          <button onclick="moveUpdate(${i}, 1)">🔽</button>
+          <button onclick="deleteUpdate(${i})">❌</button>
+        `;
+        list.appendChild(li);
+      });
+    }
+
+    function renderTracks() {
+      const list = document.getElementById('track-list-admin');
+      list.innerHTML = '';
+      tracks.forEach((track, i) => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <input value="${track.title}" onchange="tracks[${i}].title = this.value">
+          <input value="${track.url}" onchange="tracks[${i}].url = this.value" style="width: 60%">
+          <button onclick="moveTrack(${i}, -1)">🔼</button>
+          <button onclick="moveTrack(${i}, 1)">🔽</button>
+          <button onclick="deleteTrack(${i})">❌</button>
+        `;
+        list.appendChild(li);
+      });
+    }
+
+    function addUpdate() {
+      updates.push('new update');
+      renderUpdates();
+    }
+    function deleteUpdate(i) {
+      updates.splice(i, 1);
+      renderUpdates();
+    }
+    function moveUpdate(i, dir) {
+      const newIndex = i + dir;
+      if (newIndex >= 0 && newIndex < updates.length) {
+        [updates[i], updates[newIndex]] = [updates[newIndex], updates[i]];
+        renderUpdates();
+      }
+    }
+    function saveUpdates() {
+      const content = `document.addEventListener("DOMContentLoaded",()=>{const updates=${JSON.stringify(updates,null,2)};const list=document.getElementById("updates-list");if(list&&updates.length>0){updates.forEach(update=>{const li=document.createElement("li");li.textContent=update;list.appendChild(li);});}});`;
+      downloadJS('updates.js', content);
+    }
+
+    function addTrack() {
+      tracks.push({ title: "New Track", url: "https://" });
+      renderTracks();
+    }
+    function deleteTrack(i) {
+      tracks.splice(i, 1);
+      renderTracks();
+    }
+    function moveTrack(i, dir) {
+      const newIndex = i + dir;
+      if (newIndex >= 0 && newIndex < tracks.length) {
+        [tracks[i], tracks[newIndex]] = [tracks[newIndex], tracks[i]];
+        renderTracks();
+      }
+    }
+    function saveTracks() {
+      const content = `document.addEventListener("DOMContentLoaded",()=>{const latestTracks=${JSON.stringify(tracks,null,2)};const container=document.getElementById("track-list");latestTracks.forEach(track=>{const wrapper=document.createElement("div");wrapper.className="track-embed";wrapper.innerHTML=\`<iframe scrolling="no" allow="autoplay" src="\${track.url}&color=%23ff0000&inverse=false&auto_play=false&show_user=true"></iframe>\`;container.appendChild(wrapper);});});`;
+      downloadJS('tracks.js', content);
+    }
+
+    function downloadJS(filename, content) {
+      const blob = new Blob([content], { type: 'text/javascript' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = filename;
+      a.click();
+    }
+
+    function switchTab(tab) {
+      document.getElementById('updates-tab').style.display = tab === 'updates' ? 'block' : 'none';
+      document.getElementById('tracks-tab').style.display = tab === 'tracks' ? 'block' : 'none';
+    }
+
+    renderUpdates();
+    renderTracks();
+  </script>
+</body>
+</html>

@@ -295,14 +295,6 @@ body {
     transform: scale(1.05) rotate(-1.5deg);
     transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   }
-  .section-title {
-    font-size: 2rem;
-    color: red;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    text-shadow: 1px 1px white;
-    font-family: 'Staatliches', sans-serif;
-  }
   
   .card-row {
     display: flex;
@@ -376,15 +368,6 @@ body {
     font-size: 1.1rem;
     color: #ffdddd;
   }
-  
-  .section-title {
-    font-size: 2rem;
-    color: red;
-    text-shadow: 1px 1px white;
-    font-family: 'Staatliches', sans-serif;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
   .tv-wrapper {
     position: relative;
     width: 100%;
@@ -457,4 +440,233 @@ body {
 
 #server-list span {
   font-weight: bold;
+}
+/* START OF MOVIES -------------------------------------------------------------------------------------------------------*/
+.section-padding {
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  /* Responsive behavior if you want it to stack and align for wide screens */
+}
+
+.section-title {
+  font-size: 2rem;
+  font-family: 'Staatliches', sans-serif;
+  font-weight: bold;
+  background: linear-gradient(to right, red, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px red;
+  text-transform: uppercase;
+}
+.filter-section {
+  padding-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filter-group {
+  position: relative;
+  display: inline-block;
+}
+
+.filter-dropdown {
+  background: #cccccc;
+  color: black;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-family: 'VT323', monospace;
+  font-size: 1rem;
+  border: 2px solid red;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.filter-dropdown:hover {
+  background: #444;
+  color: red;
+}
+
+.select-icon {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.select-arrow {
+  width: 1rem;
+  height: 1rem;
+  color: #999;
+}
+.active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filter-tag {
+  background-color: red;
+  color: black;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-family: 'Staatliches', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 0 2px white;
+  transition: transform 0.2s ease;
+}
+
+.filter-tag:hover {
+  transform: rotate(-2deg) scale(1.05);
+}
+
+.filter-remove {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.filter-remove:hover {
+  color: #ccc;
+}
+.login-form {
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.8);
+  border: 3px solid red;
+  box-shadow: 0 0 12px red;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  font-family: 'VT323', monospace;
+}
+
+.login-form label {
+  font-size: 1.4rem;
+  color: white;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  font-size: 1.2rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+}
+
+.login-form input:focus {
+  border-color: white;
+  box-shadow: 0 0 5px white;
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.login-options a {
+  color: red;
+  text-decoration: underline;
+}
+
+.login-button {
+  padding: 1rem;
+  font-size: 1.3rem;
+  border-radius: 6px;
+}
+
+.login-button:hover {
+  background: white;
+  color: red;
+  transform: scale(1.05) rotate(-1deg);
+}
+.main-content-2 {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 2rem;
+  text-align: center;
+}
+.section-title-2 {
+  font-size: 2rem;
+  color: red;
+  text-align: center;
+  margin: 2rem 0 1rem;
+  text-shadow: 1px 1px white;
+  font-family: 'Staatliches', sans-serif;
+  text-transform: uppercase;
+}
+.login-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.login-layout .main-content-2 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.login-layout .footer {
+  text-align: center;
+  justify-content: center;
+}
+.create-account-button {
+  background: black;
+  color: white;
+  border: 2px solid red;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  margin-top: -0.5rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.create-account-button:hover {
+  background: red;
+  color: black;
+  transform: scale(1.05) rotate(1deg);
 }
