@@ -670,3 +670,17 @@ body {
   color: black;
   transform: scale(1.05) rotate(1deg);
 }
+.modpack-box {
+  margin-top: 2rem;
+  border: 3px dashed red;
+  background-color: #111;
+  padding: 2rem;
+  box-shadow: 0 0 10px red;
+  text-align: center;
+}
+.main-box ul li {
+  color: #ffcccc;
+  font-family: 'VT323', monospace;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
