@@ -684,3 +684,63 @@ body {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
 }
+.bio-main {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  text-align: center;
+}
+
+#bio-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.25;
+}
+
+.bio-content {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border: 3px solid red;
+  box-shadow: 0 0 10px red;
+  border-radius: 12px;
+  max-width: 600px;
+}
+
+.bio-pfp {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 10px red;
+  margin-bottom: 1rem;
+}
+
+.bio-name {
+  font-size: 2rem;
+  color: red;
+  font-family: 'Staatliches', sans-serif;
+  text-shadow: 1px 1px white;
+}
+
+.bio-text {
+  font-size: 1.2rem;
+  margin: 1rem 0 2rem;
+  color: #eee;
+  font-family: 'VT323', monospace;
+  text-shadow: 1px 1px black;
+}
+
+.bio-links .button {
+  margin: 0.5rem;
+}

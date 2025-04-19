@@ -26,16 +26,17 @@ const storage = getStorage(app);
 
 // Auth State Observer
 onAuthStateChanged(auth, user => {
-    console.log("✅ Auth check fired");
-    console.log("User:", user);
-  
     if (!user) {
       window.location.href = "login.html";
     } else {
-      document.getElementById("user-email-display").textContent = `👤 ${user.displayName || user.email}`;
+      console.log("✅ Auth check fired");
+      console.log("User:", user);
+      const emailDisplay = document.getElementById("user-email-display");
+      if (emailDisplay && user.email) {
+        emailDisplay.textContent = `📧 ${user.email}`;
+      }
     }
   });
-
 // Update Email
 const emailForm = document.getElementById("email-form");
 emailForm.addEventListener("submit", async e => {
@@ -104,8 +105,11 @@ bioForm.addEventListener("submit", e => {
 });
 
 // Logout
-const logoutBtn = document.getElementById("logout-button");
-logoutBtn.addEventListener("click", async () => {
-  await signOut(auth);
-  window.location.href = "login.html";
-});
+window.logout = async function () {
+    try {
+      await signOut(auth);
+      window.location.href = "../login.html"; // Adjust path if needed
+    } catch (err) {
+      alert("❌ Failed to log out: " + err.message);
+    }
+  };
