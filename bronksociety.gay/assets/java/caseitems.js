@@ -447,6 +447,18 @@ const caseItems = [
       "Effect": "buff: +20% vrill for every aryan in 5 mile radius",
       "Debuff": "stinky"
     }
+  },
+  {
+    name: "ZYNCRAFT",
+    rarity: "rarity-pink",
+    gif: "../assets/images/csgo/zyncraft.gif",
+    stats: {
+      "Rarity": "PINK",
+      "Kills": 64,
+      "Headshot %": "128%",
+      "Condition": "Battle Squared",
+      "Effect": "Regeneration II, 2 week minecraft phase",
+      "Debuff": "Saying 'In Mincraft' doesen't work anymore"
+    }
   }
-
 ];
